@@ -1,8 +1,10 @@
-# Transaction Reconciler — Recruiter-facing README
-
-Hi — I'm sharing a small, production-minded demo I built to show how I think about backend engineering, data ingestion, and delivering a usable product fast.
-
 Live demo: https://reconciler-frontend-2gb2.onrender.com
+
+---
+
+# Transaction Reconciler
+
+I'm sharing a small, production-minded demo I built to show how I think about backend engineering, data ingestion, and delivering a usable product fast.
 
 ---
 
