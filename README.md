@@ -1,5 +1,7 @@
 Live demo: https://reconciler-frontend-2gb2.onrender.com
 
+Heads up: the backend is backed by a free Render Postgres instance. Free instances are useful for demos but not guaranteed long-term — they can be reclaimed or hit limits. If the live demo stops working, it’s likely because the free DB was removed or exhausted.
+
 ---
 
 # Transaction Reconciler
@@ -96,10 +98,3 @@ ref_txn_id,source,amount,txn_date
 T1001,ledger,100.00,2025-08-01
 R5001,ledger,25.00,2025-08-02
 ```
-
----
-
-## Note about hosted demo (important)
-I hosted the frontend at: https://reconciler-frontend-2gb2.onrender.com
-
-Heads up: the backend is backed by a free Render Postgres instance. Free instances are useful for demos but not guaranteed long-term — they can be reclaimed or hit limits. If the live demo stops working, it’s likely because the free DB was removed or exhausted.
