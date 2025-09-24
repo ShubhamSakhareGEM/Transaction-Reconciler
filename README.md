@@ -4,7 +4,7 @@ Live demo: https://reconciler-frontend-2gb2.onrender.com
 
 # Transaction Reconciler
 
-I'm sharing a small, production-minded demo I built to show how I think about backend engineering, data ingestion, and delivering a usable product fast.
+Hi — I'm sharing a small, production-minded demo I built to show how I think about backend engineering, data ingestion, and delivering a usable product fast.
 
 ---
 
@@ -59,43 +59,43 @@ Why it matters: reconciliation is a recurring real-world problem in banking and 
 
 ## How to run locally (fast)
 1. Start Postgres:
-
+```bash
 docker run --name tr-dev-db -e POSTGRES_DB=reconciler -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres:15
-
+```
 2. Run backend:
-
+```bash
 cd backend
 # set env for local run (optional)
 export SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/reconciler
 export SPRING_DATASOURCE_USERNAME=postgres
 export SPRING_DATASOURCE_PASSWORD=postgres
 ./mvnw spring-boot:run
-
+```
 3. Run frontend:
-
+```bash
 cd frontend
 export REACT_APP_API_BASE_URL=http://localhost:8080
 npm install
 npm start
-
+```
 Or run everything with `docker compose up --build` if `docker-compose.yml` is present.
 
 ---
 
 ## Sample CSVs (drop into UI)
 **transactions.csv**
-
+```
 txn_id,source,amount,txn_date
 T1001,bankA,100.00,2025-08-01
 T1002,bankA,50.00,2025-08-01
 ,bankA,25.00,2025-08-02
-
+```
 **references.csv**
-
+```
 ref_txn_id,source,amount,txn_date
 T1001,ledger,100.00,2025-08-01
 R5001,ledger,25.00,2025-08-02
-
+```
 
 ---
 
