@@ -1,12 +1,12 @@
 Live demo: https://reconciler-frontend-2gb2.onrender.com
 
-Heads up: the backend is backed by a free Render Postgres instance. Free instances are useful for demos but not guaranteed long-term — they can be reclaimed or hit limits. If the live demo stops working, it’s likely because the free DB was removed or exhausted.
+Heads up: the backend is backed by a free Render Postgres instance. Free instances are useful for demos but not guaranteed long-term, they can be reclaimed or hit limits. If the live demo stops working, it’s likely because the free DB was removed or exhausted.
 
 ---
 
 # Transaction Reconciler
 
-Hi — I'm sharing a small, production-minded demo I built to show how I think about backend engineering, data ingestion, and delivering a usable product fast.
+Hi, I'm sharing a small, production-minded demo I built to show how I think about backend engineering, data ingestion, and delivering a usable product fast.
 
 ---
 
@@ -16,7 +16,7 @@ I created a full-stack Transaction Reconciler:
 - A lightweight React UI to upload files and view the reconciliation results.
 - Deployable with Docker, backed by PostgreSQL, and hosted as a free demo (Render + Vercel).
 
-Why it matters: reconciliation is a recurring real-world problem in banking and payments. This demo compresses the key engineering parts — ingestion, matching logic, persistence, reporting, and deployability — into a single, interview-friendly repository.
+Why it matters: reconciliation is a recurring real-world problem in banking and payments. This demo compresses the key engineering parts, ingestion, matching logic, persistence, reporting, and deployability, into a single, interview-friendly repository.
 
 ---
 
@@ -50,12 +50,12 @@ Why it matters: reconciliation is a recurring real-world problem in banking and 
 
 ---
 
-## Repo map — what to open first
-- `backend/src/main/java/.../service/ReconciliationService.java` — core logic. Read this to understand rules and edge-case handling.
-- `backend/src/main/java/.../controller/ReconciliationController.java` — API surface for ingest and run.
-- `frontend/src/App.js` — the minimal UI glue to demonstrate the end-to-end flow.
-- `render.yaml` — infrastructure blueprint for Render (one-file deploy).
-- `docker-compose.yml` (optional) — local end-to-end demo with Postgres.
+## Repo map, what to open first
+- `backend/src/main/java/.../service/ReconciliationService.java`, core logic. Read this to understand rules and edge-case handling.
+- `backend/src/main/java/.../controller/ReconciliationController.java`, API surface for ingest and run.
+- `frontend/src/App.js`, the minimal UI glue to demonstrate the end-to-end flow.
+- `render.yaml`, infrastructure blueprint for Render (one-file deploy).
+- `docker-compose.yml` (optional), local end-to-end demo with Postgres.
 
 ---
 
