@@ -1,0 +1,37 @@
+services:
+  - type: web
+    name: reconciler-backend
+    runtime: docker
+    plan: free
+    rootDir: backend
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        fromDatabase:
+          name: reconciler-db
+          property: connectionString
+      - key: SPRING_DATASOURCE_USERNAME
+        fromDatabase:
+          name: reconciler-db
+          property: user
+      - key: SPRING_DATASOURCE_PASSWORD
+        fromDatabase:
+          name: reconciler-db
+          property: password
+      - key: SPRING_JPA_HIBERNATE_DDL_AUTO
+        value: update
+    autoDeploy: true
+
+  - type: web
+    name: reconciler-frontend
+    runtime: static
+    plan: free
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    envVars:
+      - key: REACT_APP_API_BASE_URL
+        value: https://reconciler-backend-djws.onrender.com
+    autoDeployTrigger: commit
+
+databases:
+  - name: reconciler-db
+    plan: free
