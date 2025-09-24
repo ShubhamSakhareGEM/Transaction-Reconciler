@@ -1,0 +1,6 @@
+ref_txn_id,source,amount,txn_date
+T1001,ledger,100.00,2025-09-01
+R2001,ledger,200.00,2025-09-02
+T1003,ledger,150.00,2025-09-03
+R2003,ledger,999.00,2025-09-04
+R2004,ledger,300.00,2025-09-05
